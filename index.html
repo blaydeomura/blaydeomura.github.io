@@ -1,0 +1,279 @@
+<!-- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>  <!-- Website title -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0c0ce5b872.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Logo3.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>       <!--Services tabs -->
+                <li><a href="#about">About</a></li>
+                <!--<li><a href="#services">Services</a></li>-->
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text"> <!--position + small header -->
+            <p><span1 style="font-family:Verdana">Computer Science Student <br> Aspiring Software Engineer</span1></p>
+            <h1>Hi, I'm <span>Blayde</span><br>from Maui.<br>Based in SF.</h1>
+        </div>
+    </div>
+</div>
+<!-- The about section-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/AboutMe.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> 
+                    Aloha! My name is Blayde Omura and I am a third-year computer science Student
+                    at the University of San Francisco. As a passionate and dedicated aspiring software
+                    engineer, I'm currently seeking my first technical internship to further develop my 
+                    skills and begin my career. <br>
+
+                    I am originally from the beautiful island of Maui, Hawaii, where I learned the importance
+                    of community and strong connections. As I continue my studies and career journey, I hope
+                    to expand my horizons and bring back valuable skills, experiences, and technologies
+                    to positively contribute to my community back home. 
+
+                    Mahalo for visiting my website! Feel free to contact me below.
+                </p>
+
+                    <!--Tabs in about me -->
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Programming Languages</p>
+                        <p class="tab-links " onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!--Skills -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Proficient</span><br>Java</li> 
+                            <li><span>Advanced Beginner</span><br>C and Python</li> 
+                            <li><span>Novice</span><br>HTML, CSS, and JavaScript</li> 
+                        </ul>
+                    </div>
+                    <!--Change Experience -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>August 2021 - Present</span><br> University of San Francisco, Resident Advisor</li> 
+                            <li><span>May 2021 - August 2021</span><br>Interrupt Media, Search Engine Optimization Intern</li> 
+                            <li><span>December 2020 - August 2021</span><br>Statefarm, Customer Service Representative</li> 
+                        </ul>
+                    </div>
+                    <!--Change Education -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024 (Expected)</span><br>University of San Francisco - Computer Science</li> 
+                            <li><span>2020 </span><br>Seabury Hall High School </li> 
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------services----->
+<!-- 
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i> 
+                <h2>Web Design</h2>
+                <p>Desrciption. Need to write something here. Description need to write
+                something here. </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX designn</h2>
+                <p>Desrciption. Need to write something here. Description need to write
+                something here. </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>App Design</h2>
+                <p>Desrciption. Need to write something here. Description need to write
+                something here. </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!---Portfolio-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">                  <!---these are portfolio pictures-->
+                <img src="images/WebCrawler1.png">
+                <div class="layer">
+                    <h3>Website Crawler</h3> <!--This is where we describe projects-->
+                    <p>Java web crawler that swiftly processes and filters a 
+                        user-specified URL using a customizable property file. 
+                        The program analyzes and summarizes statistical information
+                        about the crawl, including the most common words, the longest
+                        words, and the total number of words processed, using various
+                        java libraries such as JSoup.
+                    </p>
+                    <a href="https://github.com/blaydeomura/WebsiteCrawler/tree/master"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <!--ahref paren is where I add link-->
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/MovieWall.png">
+                <div class="layer">
+                    <h3>Actor's Movie Wall</h3> <!--This is where we describe projects-->
+                    <p>Java program that efficiently searches a CSV file of 5000 popular
+                        movies using binary search algorithm, and displays an actor's
+                        filmography. Incorporates a simple user interface and reccomendation 
+                        algorithm, using custom logic to enhance actor searches to provide
+                        alternative results when an actor is incorrectly requested.
+                    </p>
+                    <a href="https://github.com/blaydeomura/Actor-sMovieWall"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Climate.png">
+                <div class="layer">
+                    <h3>Climate Data Analysis</h3> <!--This is where we describe projects-->
+                    <p>This project utilizes the speed and power of C to effectively process
+                        and analyze vast amounts of weather data from NOAA's North American
+                        Mesoscale Forecast System. It precisely formats and presents the results
+                        in a specified manner, including eleven lines of data for each state,
+                        such as average humidity, temperature, and lightning strikes. 
+
+                    </p>
+                    <a href="https://github.com/blaydeomura/ClimateDataAnalysis.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Rgrep.png">
+                <div class="layer">
+                    <h3>Restricted Grep</h3> <!--This is where we describe projects-->
+                    <p>This program is a specialized version of the UNIX utility "grep," named
+                        "rgrep," using the C programming language, which searches for and matches
+                        patterns in text lines using a limited set of regular operators. Rgrep 
+                        reads and filters lines of text from standard input, printing lines that
+                        match the specified pattern to standard output.
+                    </p>
+                    <a href="https://github.com/blaydeomura/Rgrep/tree/master"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Birthday.png">
+                <div class="layer">
+                    <h3>Birthday Database</h3> <!--This is where we describe projects-->
+                    <p> Java program that utilizes object-oriented programming, interfaces, and 
+                        polymorphism to organize and maintain a birthday database. This program 
+                        has the ability to read and write to a text file, allowing for persistent
+                        storage and access to the database even after the program terminates.
+                    </p>
+                    <a href="https://github.com/blaydeomura/BirthdayDatabase"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--<a href="#" class="btn">See more</a>-->
+    </div>
+</div>
+<!------contact----->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> bmomura@dons.usfca.edu</p>
+                <p><i class="fas fa-phone-square-alt"></i> (808)722-0683</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/blaydeomura/"><i class="fa-brands fa-linkedin"></i></a>   <!--link this to linkedin-->
+                    <a href="https://github.com/blaydeomura"><i class="fa-brands fa-square-github"></i></a> <!--link this to github-->
+                </div>
+                <a href="images/BlaydeOmuraResume.pdf" download class="btn btn2">Download Resume</a> <!--linke to download resume change to mine-->
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="Submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Kevin. Made with by Easy Tutorials</p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzny1SNIP7dkTFIDoTP6qmuttLqnJUd6n4eRDFDhCTRMi6WAmhk5M8W_QoU3LplY76A/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+</body>
+
+</html>
