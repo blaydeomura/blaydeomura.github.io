@@ -360,7 +360,7 @@ nav .fas{
         margin-left: -5%;
     }
     .header-text h1{
-        margin-top: 5%;
+        margin-top: 2%;
         font-size: 35px;
         font-weight: bolder;
         margin-right: 20%;
@@ -368,7 +368,7 @@ nav .fas{
         margin-left: 0;
     }
     .header-text span{
-        color:#fd6060; /*changes color of name*/
+        color:#ff7575; /*changes color of name*/
     }
     .header-text span1{
         color:#000000; /*changes color of name*/
